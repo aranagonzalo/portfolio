@@ -1,26 +1,31 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.289.0",
-    "next": "13.5.6",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.11.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.6",
-    "postcss": "^8",
-    "tailwindcss": "^3"
-  }
+    "name": "portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.4",
+        "@emotion/styled": "^11.11.5",
+        "@mui/material": "^5.15.21",
+        "framer-motion": "^10.16.4",
+        "lucide-react": "^0.378.0",
+        "next": "13.5.6",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-icons": "^4.11.0",
+        "sonner": "^2.0.5",
+        "tailwind-scrollbar": "^3.1.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10",
+        "eslint": "^8",
+        "eslint-config-next": "13.5.6",
+        "postcss": "^8",
+        "tailwindcss": "^3"
+    }
 }
