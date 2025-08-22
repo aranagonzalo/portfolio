@@ -83,28 +83,28 @@ export default function Home() {
     }, [hovered]);
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between py-40 px-3 md:px-60 overflow-hidden max-w-screen relative">
+        <main className="flex min-h-screen flex-col items-center justify-between py-12 md:py-36 lg:py-40 px-3 md:px-60 overflow-hidden max-w-screen relative">
             <div className="bg-green-500/25 absolute top-[16rem] -z-10 right-[-1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:right-[-33rem] lg:right-[28rem] xl:right-[-15rem] 2xl:right-[-5rem]"></div>
             <div className="bg-yellow-500/10 absolute top-[-3rem] -z-10 left-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
             {/* Sobre mi */}
             <section
                 id="sobre-mi"
-                className="flex-col z-10 max-w-5xl w-full md:w-[540px] items-center justify-start text-sm md:flex mb-20 md:mb-32"
+                className="flex-col z-10 max-w-5xl w-full md:w-[540px] items-center justify-start text-sm md:flex mb-16 md:mb-32"
             >
                 <motion.h1
                     ref={titleRef}
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className="self-start text-[32px] md:text-[40px] text-custom-black font-medium tracking-tight mb-4"
+                    className="self-start text-[24px] md:text-[40px] text-custom-black font-medium tracking-tight mb-2 md:mb-4"
                 >
                     Gonzalo Arana
                 </motion.h1>
-                <div className="text-[12px] flex gap-1 items-center justify-start text-custom-black/70 self-start mb-8">
+                <div className="text-[12px] flex gap-1 items-center justify-start text-custom-black/70 self-start mb-6 md:mb-8">
                     <MapPin className="w-3 h-3" />
                     <p>Lima, Perú</p>
                 </div>
 
-                <div className="overflow-hidden md:overflow-visible mb-8 w-full md:w-[540px] bg-gradient-to-l from-green-50 to-yellow-50 gap-6 h-60 md:h-48 relative flex flex-col justify-between px-3 md:px-6 py-4 border-2 border-black rounded-lg shadow">
+                <div className="overflow-hidden md:overflow-visible mb-8 w-full md:w-[540px] bg-gradient-to-l from-green-50 to-yellow-50 gap-6 h-[200px] md:h-48 relative flex flex-col justify-between px-3 md:px-6 py-4 border-2 border-black rounded-lg shadow">
                     <h3 className="text-base font-bold text-custom-black/90 ml-1">
                         Desarrollador Full-Stack
                     </h3>
@@ -135,7 +135,7 @@ export default function Home() {
                         animate={{ x: 0, opacity: 1 }}
                     />
                 </div>
-                <div className="flex-wrap flex gap-4 md:gap-0 self-end">
+                <div className="md:flex hidden justify-center md:flex-wrap flex-col md:flex-row gap-4 md:gap-0 md:self-end">
                     <SocialTag title="Github" />
                     <SocialTag title="Linkedin" />
                     <CustomTooltip title="Click para copiar" arrow>
@@ -144,13 +144,40 @@ export default function Home() {
                         </div>
                     </CustomTooltip>
                 </div>
-                <div className="flex gap-0 mt-3 self-end">
+                <div className="hidden md:flex gap-0 mt-3 self-end">
                     <SocialTag title="Whatsapp" />
                     <SocialTag title="Descargar CV" />
                 </div>
+                {/* Wrapper: grid en mobile (2 por fila), flex en desktop (se mantiene tal cual) */}
+                <div className="md:hidden w-full grid grid-cols-12 gap-y-3.5">
+                    {/* Github */}
+                    <div className="w-full col-span-6">
+                        <SocialTag title="Github" />
+                    </div>
+
+                    {/* Linkedin */}
+                    <div className="w-full col-span-6">
+                        <SocialTag title="Linkedin" />
+                    </div>
+
+                    {/* Email: full-width en mobile para mejor UX */}
+                    <div className="w-full col-span-8">
+                        <SocialTag title="gonzaloaranam@gmail.com" />
+                    </div>
+
+                    {/* Whatsapp */}
+                    <div className="w-full col-span-4">
+                        <SocialTag title="Whatsapp" />
+                    </div>
+
+                    {/* CV: full-width en mobile (col-span-2) */}
+                    <div className="w-full col-span-12">
+                        <SocialTag title="Descargar CV" />
+                    </div>
+                </div>
             </section>
             {/* Tecnologias */}
-            <section className="z-10 max-w-5xl w-full items-center justify-center gap-12 text-sm flex flex-col mb-32">
+            <section className="z-10 max-w-5xl w-full items-center justify-center gap-8 md:gap-12 text-sm flex flex-col mb-20 md:mb-32">
                 <h2 className="text-center">
                     Actualmente trabajo con las siguientes{" "}
                     <span className="text-red-500 font-bold">tecnologias:</span>
@@ -169,7 +196,7 @@ export default function Home() {
                     ref={titleRef}
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className="self-end text-[40px] text-custom-black font-medium tracking-tight mb-6"
+                    className="self-end text-[24px] md:text-[40px] text-custom-black font-medium tracking-tight mb-6"
                 >
                     Experiencia
                 </motion.h1>
@@ -189,7 +216,7 @@ export default function Home() {
                     ref={titleRef}
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className="self-start text-[40px] text-custom-black font-medium tracking-tight mb-6"
+                    className="self-start text-[24px] md:text-[40px] text-custom-black font-medium tracking-tight mb-6"
                 >
                     Proyectos
                 </motion.h1>
@@ -204,9 +231,9 @@ export default function Home() {
             {/* Habilidades */}
             <section
                 id="habilidades"
-                className="z-10 max-w-5xl w-full items-center justify-center gap-12 text-sm md:flex flex-col mb-32"
+                className="z-10 max-w-5xl w-full items-center justify-center gap-8 md:gap-12 text-sm md:flex flex-col mb-12 md:mb-32"
             >
-                <h2>
+                <h2 className="text-center mb-6 md:mb-0">
                     Algunas de mi habilidades blandas y{" "}
                     <span className="text-red-500 font-bold">
                         herramientas:

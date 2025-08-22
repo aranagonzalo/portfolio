@@ -57,7 +57,7 @@ const SocialTag = ({ title }) => {
                 animate={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
-                className="ml-3 flex gap-2 items-center bg-custom-white/60 border-2 rounded-lg p-2 cursor-pointer"
+                className="justify-center ml-3 flex gap-2 items-center bg-custom-white/60 border-2 rounded-lg p-2 cursor-pointer"
                 href={link}
             >
                 {title === "Linkedin" ? (

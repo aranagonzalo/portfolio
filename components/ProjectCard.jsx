@@ -21,7 +21,7 @@ export default function ProjectCard({
     return (
         <motion.div
             ref={ref}
-            className="mb-24"
+            className="mb-20 md:mb-24"
             animate={
                 inView
                     ? { scale: 1.04, rotateX: 2, rotateY: 1 }
@@ -30,7 +30,7 @@ export default function ProjectCard({
             transition={{ duration: 0.3, ease: "easeOut" }}
         >
             <div
-                className="relative w-[540px] h-48 perspective"
+                className="relative md:w-[540px] h-48 md:h-48 perspective"
                 onMouseEnter={() => setFlipped(true)}
                 onMouseLeave={() => setFlipped(false)}
             >
@@ -56,10 +56,10 @@ export default function ProjectCard({
                                 <h3 className="text-base font-bold text-custom-black/90">
                                     {title}
                                 </h3>
-                                <p className="text-[14px] tracking-tight text-green-600">
+                                <p className="max-w-[175px] md:max-w-none text-[14px] tracking-tight text-green-600">
                                     {subtitle}
                                 </p>
-                                <p className="w-[57%] text-xs font-normal text-custom-black/70">
+                                <p className="w-[46%] z-30 md:w-[57%] text-xs font-normal text-custom-black/70 overflow-y-auto">
                                     {description}
                                 </p>
                             </div>
@@ -68,10 +68,10 @@ export default function ProjectCard({
                                 <h3 className="text-base font-bold text-custom-black/90">
                                     {title}
                                 </h3>
-                                <p className="text-[14px] tracking-tight text-green-600">
+                                <p className="max-w-[175px] md:max-w-none text-[14px] tracking-tight text-green-600">
                                     {subtitle}
                                 </p>
-                                <p className="w-[57%] text-xs font-normal text-custom-black/70">
+                                <p className="w-[46%] z-30 md:w-[57%] text-xs font-normal text-custom-black/70 overflow-y-auto">
                                     {description}
                                 </p>
                                 <motion.img
